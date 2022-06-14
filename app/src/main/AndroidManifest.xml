@@ -14,13 +14,16 @@
         android:theme="@style/Theme.YemekSepeti"
         tools:targetApi="31">
         <activity
-            android:name=".CustomerMainPageActivity"
+            android:name=".Restaurant.RestaurantMainPageActivity"
             android:exported="false" />
         <activity
-            android:name=".CustomerForgotPassword"
+            android:name=".Customer.CustomerMainPageActivity"
             android:exported="false" />
         <activity
-            android:name=".RestaurantLogInActivity"
+            android:name=".Customer.CustomerForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Restaurant.RestaurantLogInActivity"
             android:exported="false" />
         <activity
             android:name=".Customer.CustomerSignUpActivity"
