@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph_customer"
+    app:startDestination="@id/customerFoodFragment">
+    <fragment
+        android:id="@+id/customerFoodFragment"
+        android:name="com.mobil.yemeksepeti.Customer.CustomerFoodFragment"
+        android:label="fragment_customer_food"
+        tools:layout="@layout/fragment_customer_food" />
+</navigation>

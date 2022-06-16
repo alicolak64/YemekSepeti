@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph_restaurant"
+    app:startDestination="@id/restaurantFoodFragment">
+    <fragment
+        android:id="@+id/restaurantFoodFragment"
+        android:name="com.mobil.yemeksepeti.Restaurant.RestaurantFoodFragment"
+        android:label="RestaurantFoodFragment" >
+        <action
+            android:id="@+id/action_restaurantFoodFragment_to_restaurantAddFoodFragment"
+            app:destination="@id/restaurantAddFoodFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantAddFoodFragment2"
+        android:name="com.mobil.yemeksepeti.Restaurant.RestaurantAddFoodFragment"
+        android:label="fragment_restaurant_add_food"
+        tools:layout="@layout/fragment_restaurant_add_food" >
+        <action
+            android:id="@+id/action_restaurantAddFoodFragment2_to_restaurantFoodFragment"
+            app:destination="@id/restaurantFoodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantOthersFragment"
+        android:name="com.mobil.fooddelivery.Restaurant.RestaurantOthersFragment"
+        android:label="fragment_restaurant_others"
+        tools:layout="@layout/fragment_restaurant_others" >
+        <action
+            android:id="@+id/action_restaurantOthersFragment_to_restaurantProfileFragment"
+            app:destination="@id/restaurantProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantProfileFragment"
+        android:name="com.mobil.yemeksepeti.Restaurant.RestaurantProfileFragment"
+        android:label="fragment_restaurant_profile"
+        tools:layout="@layout/fragment_restaurant_profile" >
+        <action
+            android:id="@+id/action_restaurantProfileFragment_to_restaurantOthersFragment"
+            app:destination="@id/restaurantOthersFragment" />
+    </fragment>
+</navigation>
