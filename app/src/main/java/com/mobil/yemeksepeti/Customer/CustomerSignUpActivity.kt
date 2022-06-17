@@ -57,7 +57,7 @@ class CustomerSignUpActivity : AppCompatActivity() {
         fullName = binding.editTextCustomerSignUpFullName.text.toString().trim()
         email = binding.editTextCustomerSignUpEmail.text.toString().trim()
         password = binding.editTextCustomerSignUpPassword.text.toString().trim()
-        var confirmPassword = binding.editTextCustomerSignUpConfirmPassword.text.toString().trim()
+        val confirmPassword = binding.editTextCustomerSignUpConfirmPassword.text.toString().trim()
 
 
 
