@@ -2,6 +2,7 @@ package com.mobil.yemeksepeti.Restaurant
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.mobil.yemeksepeti.R
 
 class RestaurantUpdateFoodActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
