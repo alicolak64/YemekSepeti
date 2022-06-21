@@ -4,6 +4,139 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fooddelivery"
     tools:context=".Restaurant.RestaurantUpdateFoodActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView_restaurant_food_photo"
+        android:layout_width="315dp"
+        android:layout_height="179dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="49dp"
+        android:onClick="selectImage"
+        android:src="@drawable/gorselsecimi"
+        app:layout_constraintBottom_toTopOf="@+id/editText_restaurant_food_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editText_restaurant_food_name"
+        android:layout_width="302dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:hint="Enter Food Name"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/editText_restaurant_food_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_restaurant_food_photo" />
+
+    <EditText
+        android:id="@+id/editText_restaurant_food_price"
+        android:layout_width="306dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:hint="Enter Food Price"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView_CategoriesAddFood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_restaurant_food_name" />
+
+    <Button
+        android:id="@+id/button_restaurant_update_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:onClick="updateFood"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_addFood" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_addFood"
+        android:layout_width="302dp"
+        android:layout_height="131dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_restaurant_update_food"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_CategoriesAddFood">
+
+        <RadioButton
+            android:id="@+id/radioButton_soup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Soup"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/radioButton_mainCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Main Course"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Dessert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dessert"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Drink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Drink"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView_CategoriesAddFood"
+        android:layout_width="303dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="3dp"
+        android:text="Categories"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup_addFood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_restaurant_food_price" />
+
+    <Button
+        android:id="@+id/button_restaurant_delete_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:onClick="deleteFood"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_addFood"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
