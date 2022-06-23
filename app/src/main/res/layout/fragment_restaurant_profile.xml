@@ -1,14 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fooddelivery"
     tools:context=".Restaurant.RestaurantProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:textColor="@color/black"
+        android:id="@+id/textView_restaurant_email"
+        android:layout_width="259dp"
+        android:background="#DD880B"
+        android:layout_height="0dp"
+        android:layout_marginBottom="53dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="colak4364@gmail.com"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView6"
+        android:background="#FFC107"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:text="Restaurant Email"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_restaurant_email"
+        app:layout_constraintEnd_toEndOf="@+id/textView_restaurant_email"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_profile_textView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:textColor="@color/black"
+        android:background="#FFC107"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurant Name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_restaurant_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_restaurant_email" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:background="#FFC107"
+        android:text="Restaurant Address"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_restaurant_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_restaurant_password" />
+
+    <TextView
+        android:id="@+id/restaurant_profile_textView"
+        android:layout_width="289dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="55dp"
+        android:gravity="center"
+        android:text="Profile Details"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_restaurant_name"
+        android:background="#DD880B"
+        android:layout_width="267dp"
+        android:layout_height="0dp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="46dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="WhiteSea Restaurant"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/editText_restaurant_password"
+        android:background="#DD880B"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:inputType="textPersonName"
+        android:text="admin"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/editText_restaurant_address"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="72dp"
+        android:background="#DD880B"
+        android:textColor="@color/black"
+        android:layout_marginBottom="34dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Akdeniz University Campus"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="43dp"
+        android:onClick="restaurantProfileUpdateButton"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_restaurant_address" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFC107"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/black"
+        android:text="Restaurant Password"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_restaurant_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_restaurant_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>
