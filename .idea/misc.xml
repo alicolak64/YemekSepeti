@@ -13,11 +13,13 @@
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_customer_forgot_password.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_customer_log_in.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_customer_main_page.xml" value="0.176" />
+        <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_customer_search.xml" value="0.17579462102689486" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_customer_sign_up.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_restaurant_log_in.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_restaurant_main_page.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_restaurant_update_food.xml" value="0.25" />
+        <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/fragment_customer_cart_activity.xml" value="0.17579462102689486" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/fragment_restaurant_add_food.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/fragment_restaurant_food.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/fragment_restaurant_others.xml" value="0.22826086956521738" />

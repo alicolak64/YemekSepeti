@@ -18,6 +18,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Customer.CustomerSearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Customer.CustomerCartActivity"
+            android:exported="false" />
+        <activity
             android:name=".Restaurant.RestaurantUpdateFoodActivity"
             android:exported="false" />
         <activity
