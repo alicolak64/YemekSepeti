@@ -4,6 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fooddelivery"
     tools:context=".Customer.CustomerMainPageActivity">
+
+    <ImageView
+        android:id="@+id/customer_home"
+        android:layout_width="56dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="customerHome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/customer_search"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/customer_basket"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="customerBasket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/customer_line"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_basket"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/customer_search"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="customerSearch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/customer_basket"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_search"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/customer_line"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="customerLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_line"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentCustomerContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="409dp"
+        android:layout_height="669dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@+id/customer_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/navigation_graph_customer" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
