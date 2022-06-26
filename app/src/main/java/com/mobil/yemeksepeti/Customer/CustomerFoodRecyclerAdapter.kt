@@ -7,15 +7,16 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.mobil.yemeksepeti.Customer.CustomerAddCartActivity
 import com.mobil.yemeksepeti.R
 import java.text.DecimalFormat
 
 
 class CustomerFoodRecyclerAdapter(
+
     private var foodNameList: ArrayList<String>,
     private var foodPriceList: ArrayList<String>,
     private var foodCategoryList: ArrayList<String>
+
 ):
     RecyclerView.Adapter<CustomerFoodRecyclerAdapter.FoodHolder>() {
 
