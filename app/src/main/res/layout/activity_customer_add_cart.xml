@@ -4,6 +4,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fooddelivery"
     tools:context=".Customer.CustomerAddCartActivity">
+
+    <TextView
+        android:id="@+id/textView_customer_addFood_foodName"
+        android:layout_width="332dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="118dp"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView_customer_addFood_foodPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.582"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_loading" />
+
+    <TextView
+        android:id="@+id/textView_customer_addFood_foodPrice"
+        android:layout_width="332dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="46dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="48dp"
+        android:textSize="30dp"
+        android:layout_marginEnd="37dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_customer_addFood_foodName" />
+
+    <Button
+        android:id="@+id/button_AddCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background_cart"
+        android:layout_marginBottom="50dp"
+        android:onClick="addCart"
+        android:text="Add Cart"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_customer_addFood_foodName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/loading" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="129dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginBottom="27dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/button_AddCart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_customer_addFood_foodPrice">
+
+        <Button
+            android:id="@+id/button_foodMinus"
+            android:layout_width="37dp"
+            android:layout_height="43dp"
+            android:background="@drawable/button_background_cart"
+            android:onClick="minusFood"
+            android:text="-"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_countOfFood"
+            android:layout_width="53dp"
+            android:layout_height="41dp"
+            android:background="@drawable/button_background"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="1"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_foodPlus"
+            android:layout_width="37dp"
+            android:layout_height="43dp"
+            android:background="@drawable/button_background_cart"
+            android:onClick="plusFood"
+            android:text="+"
+            android:textStyle="bold"
+            tools:ignore="" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
