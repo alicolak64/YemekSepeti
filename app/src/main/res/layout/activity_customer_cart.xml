@@ -4,6 +4,139 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DC8607"
     tools:context=".Customer.CustomerCartActivity">
+
+    <Button
+        android:id="@+id/customer_card_order_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/button_background_cart"
+        android:onClick="continueButton"
+        android:text="Continue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_customerCartPage" />
+
+    <ImageView
+        android:id="@+id/customer_home"
+        android:layout_width="56dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="customerHome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/customer_search"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/customer_basket"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="customerBasket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/customer_line"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_basket"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/customer_search"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="customerSearch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/customer_basket"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_search"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/customer_line"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="customerLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_line"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_customerCartPage"
+        android:layout_width="410dp"
+        android:layout_height="498dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_removeCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/button_background_cart"
+        android:onClick="removeCart"
+        android:text="Remove All"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_customerCartPage" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="125dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/customer_search"
+        app:layout_constraintEnd_toStartOf="@+id/customer_card_order_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_customerCartPage">
+
+        <RadioButton
+            android:id="@+id/addressRadioButton"
+            android:layout_width="107dp"
+            android:layout_height="46dp"
+            android:minHeight="48dp"
+            android:text="Address"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/addressRadioButton2"
+            android:layout_width="107dp"
+            android:layout_height="48dp"
+            android:minHeight="48dp"
+            android:text="Address2"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
