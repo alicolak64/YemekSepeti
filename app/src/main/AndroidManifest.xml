@@ -18,6 +18,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".CustomerPaymentPageActivity"
+            android:exported="false" />
+        <activity
             android:name=".Customer.CustomerAddCartActivity"
             android:exported="false" />
         <activity
