@@ -4,6 +4,162 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fooddelivery"
     tools:context=".Customer.CustomerPaymentPageActivity">
+
+
+    <EditText
+        android:id="@+id/editTextCardNumber"
+        android:layout_width="269dp"
+        android:layout_height="68dp"
+        android:maxLength="16"
+        android:ems="10"
+        android:hint="Card Number"
+        android:background="@drawable/button_background_cart"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194" />
+
+    <EditText
+        android:id="@+id/editTextExpirationDate"
+        android:background="@drawable/button_background_cart"
+        android:layout_width="221dp"
+        android:maxLength="5"
+        android:layout_height="71dp"
+        android:hint="Expiration Date"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:inputType="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.407" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="56dp"
+        android:layout_height="47dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.002"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.204"
+        app:srcCompat="@drawable/ic_credit_card" />
+
+    <EditText
+        android:id="@+id/editTextCVV"
+        android:layout_width="143dp"
+        android:background="@drawable/button_background_cart"
+        android:layout_height="69dp"
+        android:maxLength="3"
+        android:layout_marginStart="7dp"
+        android:ems="10"
+        android:hint="CVV"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/customer_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/editTextExpirationDate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.406" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="46dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editTextCardNumber"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205"
+        app:srcCompat="@drawable/visa" />
+
+    <ImageView
+        android:id="@+id/customer_home"
+        android:layout_width="56dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="customerHome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/customer_search"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/customer_basket"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="customerBasket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/customer_line"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_basket"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/customer_search"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="customerSearch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/customer_basket"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_search"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/customer_line"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="customerLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_line"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/orderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="orderButton"
+        android:text="Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.824" />
+
+    <TextView
+        android:id="@+id/textView_totalPrice"
+        android:layout_width="276dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginBottom="29dp"
+        android:gravity="center"
+        android:text="Total : "
+        app:layout_constraintBottom_toTopOf="@+id/editTextCardNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
