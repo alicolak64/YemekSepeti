@@ -15,6 +15,7 @@
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_customer_forgot_password.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_customer_log_in.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_customer_main_page.xml" value="0.1625" />
+        <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_customer_orders_history.xml" value="0.1625" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_customer_payment_page.xml" value="0.1625" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_customer_search.xml" value="0.17579462102689486" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/activity_customer_sign_up.xml" value="0.22826086956521738" />
@@ -31,6 +32,7 @@
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/fragment_restaurant_others.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/fragment_restaurant_profile.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/recycler_row_customer_food.xml" value="0.1625" />
+        <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/recycler_row_customer_orders_history.xml" value="0.1625" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/recycler_row_restaurant_food.xml" value="0.1625" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/layout/reycler_row_customer_cart.xml" value="0.1625" />
         <entry key="..\:/Users/Ali/AndroidStudioProjects/YemekSepeti/app/src/main/res/menu/addfood.xml" value="0.25416666666666665" />
