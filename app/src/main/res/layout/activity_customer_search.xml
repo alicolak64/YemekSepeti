@@ -3,7 +3,153 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/fooddelivery"
     android:layout_height="match_parent"
     tools:context=".Customer.CustomerSearchActivity">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_margin="10dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:queryHint="Search Here ..." />
+
+
+    <ImageView
+        android:id="@+id/customer_home"
+        android:layout_width="56dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="customerHome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/customer_search"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/customer_basket"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="customerBasket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/customer_line"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_basket"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/customer_search"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="customerSearch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/customer_basket"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_search"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/customer_line"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="671dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="customerLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_line"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_search"
+        android:layout_width="405dp"
+        android:layout_height="507dp"
+        android:background="#DC8607"
+        app:layout_constraintBottom_toTopOf="@+id/customer_basket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/customer_search_dessert_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background_cart"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="18dp"
+        android:onClick="dessert"
+        android:text="dessert"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_view_search"
+        app:layout_constraintEnd_toStartOf="@+id/customer_search_mainCourse_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+    <Button
+        android:id="@+id/customer_search_mainCourse_button"
+        android:layout_width="wrap_content"
+        android:background="@drawable/button_background_cart"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="18dp"
+        android:onClick="mainCourse"
+        android:text="Main Course"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_view_search"
+        app:layout_constraintEnd_toStartOf="@+id/customer_search_drink_button"
+        app:layout_constraintStart_toEndOf="@+id/customer_search_dessert_button"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+    <Button
+        android:id="@+id/customer_search_drink_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/button_background_cart"
+        android:onClick="drink"
+        android:text="drink"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_view_search"
+        app:layout_constraintEnd_toStartOf="@+id/customer_search_soup_button"
+        app:layout_constraintStart_toEndOf="@+id/customer_search_mainCourse_button"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+    <Button
+        android:id="@+id/customer_search_soup_button"
+        android:background="@drawable/button_background_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="18dp"
+        android:onClick="soup"
+        android:text="Soup"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_view_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/customer_search_drink_button"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
